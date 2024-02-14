@@ -5,7 +5,6 @@ function countNumberOfNinesInNumber(number) {
 
   for (let i = 0; i < numStr.length; i++) {
     const digit = numStr[i];
-    console.log (digit)
     if ("9" === digit) {
       count++;
     }
