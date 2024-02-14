@@ -45,9 +45,15 @@ function playGame() {
       alert(`Incorrect, you lose! The correct answer was ${question.correctChoice}. Your score was ${score}.`);
     }
 
-    score++;
-    alert(`Correct! Your score is now ${score}!`);
+    const userHasAnsweredCorrectly = userChoice == question.correctChoice;
+    if (userHasAnsweredCorrectly) {
+      score++
+      alert(`Correct! Your score is now ${score}!`);
+    }
   }
+
+
+
 
   alert, `You've reached the end of the quiz, your score was ${score}. Please play again!`;
 }
