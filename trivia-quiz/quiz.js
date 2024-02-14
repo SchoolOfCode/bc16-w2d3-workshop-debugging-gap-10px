@@ -28,9 +28,9 @@ function playGame() {
     return alert("You've cancelled the quiz, no more questions will be shown.");
   }
 
-  let score = -Infinity;
+  let score = 0;
 
-  for (let i = 1; i !== questions.length; i++) {
+  for (let i = 0; i < questions.length; i++) {
     const question = questions[i];
     const text = createTextToDisplayQuestion(question);
     const userChoice = getSelectedChoiceFromUser(text);
@@ -42,7 +42,6 @@ function playGame() {
 
     const userHasAnsweredIncorrectly = userChoice !== question.correctChoice;
     if (userHasAnsweredIncorrectly) {
-      return;
       alert(`Incorrect, you lose! The correct answer was ${question.correctChoice}. Your score was ${score}.`);
     }
 
